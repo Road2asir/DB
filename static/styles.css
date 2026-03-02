@@ -1,0 +1,55 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+	padding: 20px;
+}
+.notification {
+	padding: 15px;
+	margin: 10px 0;
+	border-radius: 5px;
+	color: #fff;
+}
+.success {
+	background-color: #4caf50;
+}
+.error {
+	background-color: #f44336;
+}
+
+header, footer {
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 10px;
+}
+
+main {
+	padding: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #e0e0e0;
+}
+
+nav {
+	margin: 20px 0;
+}
+
+a {
+	margin: 0 10px;
+	text-decoration: none;
+	color: #007BFF;
+}
+

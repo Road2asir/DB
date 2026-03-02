@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Agregar Empleado{% endblock %}
+{% block content %}
+<h2>Agregar nuevo Empleado</h2>
+		<form action="/agregar_empleado"
+		      method="POST">
+			<label for="dni">DNI:</label><br>
+			<input type="text" id="dni" name="dni" required><br><br>
+
+			<label for="nombre">Nombre:</label><br>
+			<input type="text" id="nombre" name="nombre" required><br><br>
+
+			<label for="apellidos">Apellidos:</label><br>
+			<input type="text" id"apellidos" name="apellidos"><br><br>
+
+			<label for="fecha_nac">Fecha de Nacimiento:</label><br>
+			<input type="date" id="fecha_nac" name="fecha_nac" required><br><br>
+
+			<label for="n_hijos">Numero de hijos:</label><br>
+			<input type="number" id="n_hijos" name="n_hijos" min="0"><br><br>
+
+			<label for="estatura">Estatura:</label><br>
+			<input type="number" step="0.01" id="estatura" name="estatura"><br><br>
+
+			<input type="submit" value="Agregar Empleado">
+		</form>
+
+{% endblock %}

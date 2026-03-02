@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}Caso Practico UD5 {% endblock %}</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+		<header>
+			<h1>Caso UD5</h1>
+			<nav>
+				<a href="/">Inicio</a>
+				<a href="/agregar_empleado">Agregar Empleado</a>
+			</nav>
+
+		</header>
+		<main>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+			<div class="container mt-3">
+				<ul class="list-unstyled">
+					{% for category, message in messages %}
+					<li class="notification {{category}}">{{ message }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+			{% endwith %}
+			{% block content %}
+			{% endblock %}
+		</main>
+		<footer>
+			<p> 2026 asir/db</p>
+		</footer>
+	</body>
+</html>
+

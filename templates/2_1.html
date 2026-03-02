@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Empleados{% endblock %}
+
+{% block content %}
+		<h3>2.1: Obtener los datos de empleados que tengan uno, dos, tres o cinco hijos.</h3>
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					{% for i in column_names %}
+					<th>{{ i }}</th>
+					{% endfor %}
+				</tr>
+			</thead>
+			<tbody>
+				{% for empleado in empleados %}
+				<tr>
+					{% for i in empleado %}
+					<td>{{ i }}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<br><br><br>
+
+		<h2>Puntos a solucionar:</h2>
+		<p><a href="/punto2_1">2.1: Obtener los datos de los empleados que tengan uno, dos, tres o cinco hijos.</a><br>
+		<a href="/punto2_2">2.2: Obtener los datos de empleados que nacieron entre el 01/01/1985 y el 31/12/2000</a><br>
+		<a href="/punto2_3">2.3: Obtener los datos de los empleados que no han introducido el número de hijos en la casilla correspondiente.</a><br>
+		<a href="/punto2_4">2.4: Crea una nueva columna en la tabla Empleados, llamada “nombreApellidos” cuyo contenido será el nombre y los apellidos concatenados, separados por un espacio en blanco.</a><br></p>
+
+{% endblock %}
+
